@@ -1,0 +1,103 @@
+# Sensitive configuration files - DO NOT COMMIT
+application.properties
+src/main/resources/application.properties
+src/main/resources/application-*.properties
+
+# Keep example/template files
+!application.properties.example
+!application.properties.template
+
+### Maven ###
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+### STS/Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+.metadata/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Logs ###
+*.log
+logs/
+spring.log
+
+### OS Files ###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+### Temporary Files ###
+*.tmp
+*.bak
+*.swp
+*~.nib
+*.class
+
+### Database ###
+*.db
+*.sqlite
+*.sqlite3
+
+### Build artifacts ###
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+### Security & Secrets ###
+*.key
+*.pem
+*.p12
+*.jks
+*.keystore
+secrets/
+credentials/
+
+### Environment Variables ###
+.env
+.env.local
+.env.*.local
