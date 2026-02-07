@@ -40,6 +40,7 @@ public class JWTUtil {
 		
 		return Jwts.builder()
 				.setSubject(user.getUserEmail())
+				.claim("userName", user.getUserName())
 				.claim("role",user.getRole().name())
 				.claim("permission", permissions.stream().map(Enum::name).collect(Collectors.toList()))
 				.setIssuedAt(now)

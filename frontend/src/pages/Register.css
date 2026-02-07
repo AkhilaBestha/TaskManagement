@@ -1,0 +1,524 @@
+/* Register Page - Modern Dark Theme with Professional SaaS Design */
+
+/* Main Container - Dark Blue Night Sky Background (Large Screens) */
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg,
+    #030b15 0%,
+    #061325 15%,
+    #0a1a32 30%,
+    #0d2040 50%,
+    #0a1a32 70%,
+    #061325 85%,
+    #030b15 100%
+  );
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Night sky ambient glow overlay */
+.register-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse at 15% 10%, rgba(100, 149, 237, 0.15) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 15%, rgba(147, 197, 253, 0.1) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 90%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 25% 50%, rgba(96, 165, 250, 0.08) 0%, transparent 45%),
+    radial-gradient(ellipse at 75% 60%, rgba(59, 130, 246, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Stars Container - Visible on Large Screens */
+.stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Small Rounded Stars - Soft Glow Effect */
+.star {
+  position: absolute;
+  background: radial-gradient(circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.9) 30%,
+    rgba(255, 255, 255, 0.4) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 50%;
+  box-shadow:
+    0 0 6px rgba(255, 255, 255, 0.95),
+    0 0 12px rgba(255, 255, 255, 0.7),
+    0 0 20px rgba(200, 220, 255, 0.5),
+    0 0 30px rgba(150, 180, 255, 0.25);
+  animation: slowFall ease-in-out infinite;
+  opacity: 0;
+}
+
+/* Individual star positioning and timing - slow gentle fall */
+.star:nth-child(1) { left: 3%; animation-duration: 18s; animation-delay: 0s; width: 5px; height: 5px; }
+.star:nth-child(2) { left: 8%; animation-duration: 22s; animation-delay: 2s; width: 6px; height: 6px; }
+.star:nth-child(3) { left: 14%; animation-duration: 20s; animation-delay: 4s; width: 4px; height: 4px; }
+.star:nth-child(4) { left: 20%; animation-duration: 24s; animation-delay: 1s; width: 7px; height: 7px; }
+.star:nth-child(5) { left: 26%; animation-duration: 19s; animation-delay: 6s; width: 5px; height: 5px; }
+.star:nth-child(6) { left: 32%; animation-duration: 25s; animation-delay: 3s; width: 6px; height: 6px; }
+.star:nth-child(7) { left: 38%; animation-duration: 21s; animation-delay: 5s; width: 4px; height: 4px; }
+.star:nth-child(8) { left: 44%; animation-duration: 26s; animation-delay: 1.5s; width: 8px; height: 8px; }
+.star:nth-child(9) { left: 50%; animation-duration: 18s; animation-delay: 7s; width: 5px; height: 5px; }
+.star:nth-child(10) { left: 56%; animation-duration: 23s; animation-delay: 2.5s; width: 6px; height: 6px; }
+.star:nth-child(11) { left: 62%; animation-duration: 20s; animation-delay: 8s; width: 4px; height: 4px; }
+.star:nth-child(12) { left: 68%; animation-duration: 24s; animation-delay: 3.5s; width: 7px; height: 7px; }
+.star:nth-child(13) { left: 74%; animation-duration: 19s; animation-delay: 0.5s; width: 5px; height: 5px; }
+.star:nth-child(14) { left: 80%; animation-duration: 25s; animation-delay: 5.5s; width: 6px; height: 6px; }
+.star:nth-child(15) { left: 86%; animation-duration: 21s; animation-delay: 4s; width: 4px; height: 4px; }
+.star:nth-child(16) { left: 92%; animation-duration: 27s; animation-delay: 9s; width: 7px; height: 7px; }
+.star:nth-child(17) { left: 97%; animation-duration: 22s; animation-delay: 5s; width: 5px; height: 5px; }
+.star:nth-child(18) { left: 11%; animation-duration: 23s; animation-delay: 0.3s; width: 8px; height: 8px; }
+.star:nth-child(19) { left: 29%; animation-duration: 19s; animation-delay: 7.5s; width: 4px; height: 4px; }
+.star:nth-child(20) { left: 47%; animation-duration: 24s; animation-delay: 3.2s; width: 6px; height: 6px; }
+.star:nth-child(21) { left: 65%; animation-duration: 20s; animation-delay: 6.5s; width: 5px; height: 5px; }
+.star:nth-child(22) { left: 83%; animation-duration: 26s; animation-delay: 1.8s; width: 7px; height: 7px; }
+.star:nth-child(23) { left: 5%; animation-duration: 21s; animation-delay: 8.5s; width: 4px; height: 4px; }
+.star:nth-child(24) { left: 35%; animation-duration: 25s; animation-delay: 4.8s; width: 6px; height: 6px; }
+.star:nth-child(25) { left: 59%; animation-duration: 18s; animation-delay: 2.8s; width: 5px; height: 5px; }
+
+/* Slow falling animation - gentle drift like snowflakes */
+@keyframes slowFall {
+  0% {
+    transform: translateY(-30px) translateX(0) scale(0.8);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.95;
+    transform: translateY(8vh) translateX(3px) scale(1);
+  }
+  25% {
+    transform: translateY(25vh) translateX(-5px) scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(50vh) translateX(6px) scale(0.95);
+    opacity: 0.85;
+  }
+  75% {
+    transform: translateY(75vh) translateX(-4px) scale(0.9);
+    opacity: 0.8;
+  }
+  92% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(105vh) translateX(2px) scale(0.7);
+    opacity: 0;
+  }
+}
+
+/* Centered Rounded White Card - Professional SaaS Design */
+.register-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow:
+    0 32px 64px -12px rgba(0, 0, 0, 0.35),
+    0 16px 32px -8px rgba(0, 0, 0, 0.2),
+    0 8px 16px -4px rgba(79, 70, 229, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 2;
+  animation: cardFloat 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes cardFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Header Section */
+.register-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.register-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a2744;
+  margin-bottom: 20px;
+}
+
+.register-logo .logo-icon {
+  color: #4f46e5;
+  font-size: 2rem;
+}
+
+.register-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a2744;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.register-subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+/* Error Message */
+.register-error {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* Form Styles */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.register-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.register-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  letter-spacing: 0.01em;
+}
+
+.register-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.register-input-icon {
+  position: absolute;
+  left: 16px;
+  color: #9ca3af;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
+
+.register-input {
+  width: 100%;
+  padding: 14px 16px 14px 48px;
+  font-size: 0.95rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background-color: #f9fafb;
+  color: #1f2937;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.register-input::placeholder {
+  color: #9ca3af;
+}
+
+.register-input:hover {
+  border-color: #d1d5db;
+  background-color: #ffffff;
+}
+
+.register-input:focus {
+  border-color: #4f46e5;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+.register-input:focus + .register-input-icon,
+.register-input-wrapper:focus-within .register-input-icon {
+  color: #4f46e5;
+}
+
+/* Select Input */
+.register-select {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background-color: #f9fafb;
+  color: #1f2937;
+  transition: all 0.2s ease;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 20px;
+}
+
+.register-select:hover {
+  border-color: #d1d5db;
+  background-color: #ffffff;
+}
+
+.register-select:focus {
+  border-color: #4f46e5;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+/* Submit Button */
+.register-submit-btn {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
+}
+
+.register-submit-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #4338ca 0%, #4f46e5 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.5);
+}
+
+.register-submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.register-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Loading Spinner */
+.register-spinner {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: register-spin 0.8s ease-in-out infinite;
+}
+
+@keyframes register-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Footer Link */
+.register-footer {
+  text-align: center;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.register-link {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.register-link:hover {
+  color: #4338ca;
+  text-decoration: underline;
+}
+
+/* Responsive Design - Small Screens */
+@media (max-width: 520px) {
+  /* Smooth dark blue gradient background for mobile */
+  .register-container {
+    padding: 16px;
+    background: linear-gradient(160deg,
+      #0a1628 0%,
+      #0f2744 25%,
+      #143352 50%,
+      #0f2744 75%,
+      #0a1628 100%
+    );
+  }
+
+  /* Subtle ambient glow for mobile */
+  .register-container::before {
+    background:
+      radial-gradient(ellipse at 30% 20%, rgba(59, 130, 246, 0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at 70% 80%, rgba(37, 99, 235, 0.14) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 50%, rgba(96, 165, 250, 0.08) 0%, transparent 60%);
+  }
+
+  /* Hide large falling stars on mobile */
+  .stars-container .star {
+    width: 3px !important;
+    height: 3px !important;
+    box-shadow:
+      0 0 4px rgba(255, 255, 255, 0.8),
+      0 0 8px rgba(255, 255, 255, 0.5),
+      0 0 12px rgba(200, 220, 255, 0.3);
+    animation-duration: 12s !important;
+  }
+
+  /* Smaller subtle star particles */
+  .star:nth-child(n+15) {
+    display: none;
+  }
+
+  .register-card {
+    padding: 36px 28px;
+    border-radius: 24px;
+    box-shadow:
+      0 24px 48px -12px rgba(0, 0, 0, 0.4),
+      0 12px 24px -6px rgba(0, 0, 0, 0.25);
+  }
+
+  .register-logo {
+    font-size: 1.5rem;
+  }
+
+  .register-logo .logo-icon {
+    font-size: 1.75rem;
+  }
+
+  .register-title {
+    font-size: 1.5rem;
+  }
+
+  .register-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .register-input,
+  .register-select {
+    padding: 12px 14px 12px 44px;
+    font-size: 0.9rem;
+  }
+
+  .register-select {
+    padding-left: 14px;
+  }
+
+  .register-submit-btn {
+    padding: 14px 20px;
+    font-size: 0.95rem;
+  }
+
+  .register-footer {
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 380px) {
+  .register-container {
+    padding: 12px;
+  }
+
+  .register-card {
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+
+  .register-logo {
+    font-size: 1.35rem;
+    gap: 8px;
+  }
+
+  .register-title {
+    font-size: 1.35rem;
+  }
+
+  .register-form {
+    gap: 16px;
+  }
+}
+
+/* Additional ambient glow effect on the card */
+.register-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(79, 70, 229, 0.1), transparent);
+  border-radius: 26px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.register-card:hover::before {
+  opacity: 1;
+}
+
+/* Subtle floating animation for extra premium feel */
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Optional: Add subtle pulse to stars for extra sparkle */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
